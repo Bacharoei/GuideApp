@@ -1,7 +1,10 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
 import Header from "../components/Header/Header";
+import FeaturedGuides from "../components/Guide/FeaturedGuide";
+import Services from "../components/Services/Services";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 
 const Home = () => {
   return (
@@ -16,6 +19,9 @@ const Home = () => {
           </Link>
         </Banner>
       </Header>
+      <Services />
+      <FeaturedGuides />
+      <Footer />
     </>
   );
 };

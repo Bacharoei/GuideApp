@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import GuideProvider from "./components/context/guides";
-import ServiceProvider from "./components/context/services";
+import ServicesProvider from "./components/context/services";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <GuideProvider>
-    <Router>
-      <App />
-    </Router>
+    <ServicesProvider>
+      <Router>
+        <App />
+      </Router>
+    </ServicesProvider>
   </GuideProvider>,
   document.getElementById("root")
 );

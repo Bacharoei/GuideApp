@@ -84,3 +84,173 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 /* end of globals */
+
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: var(--mainBlack);
+  font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 2rem 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 20rem;
+  height: 2px;
+  background: var(--primaryColor);
+  margin: 1.7rem auto;
+}
+/* end of Title */
+
+/* services */
+.services {
+  padding: 2rem 0;
+}
+.services {
+  background: var(--darkGrey);
+  text-align: center;
+}
+.services-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+.service span {
+  display: inline-block;
+  color: var(--primaryColor);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.services h6 {
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+}
+.services p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services p {
+    width: 100%;
+  }
+}
+/*end of services */
+
+/* single guide*/
+
+.single-guide {
+  padding: 5rem 0 0 0;
+}
+.single-guide-images {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+.single-guide-images img {
+  width: 100%;
+  display: block;
+}
+.single-guide-info {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem auto;
+  background-color: #f5f5f5;
+  border: 2px solid #dcdcdc;
+  border-radius: 1rem;
+}
+
+.desc,
+.info {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.desc-header,
+.info-header {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.desc h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.desc p,
+.procedure {
+  line-height: 1.5;
+}
+.info h3,
+.info h6 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.info h6 {
+  font-weight: 300;
+}
+.guide-extras,
+.guide-procedure {
+  width: 80vw;
+  margin: 0 auto 3rem auto;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border: 2px solid #dcdcdc;
+  border-radius: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.guide-extras h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  cursor: pointer;
+}
+.extras {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .single-guide-images,
+  .single-guide-info,
+  .guide-extras {
+    width: 95vw;
+    max-width: 1170px;
+  }
+  .single-guide-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .info {
+    padding-left: 3rem;
+  }
+}
+/* end of single guide */

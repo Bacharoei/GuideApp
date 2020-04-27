@@ -2,14 +2,14 @@
 .defaultHeader,
 .gudieHero {
   min-height: calc(95vh - 20vh);
-  background: url("../../images/headerHomePager.jpg") center/cover no-repeat;
+  background: url("../../images/defbck.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .gudieHero {
-  background-image: url("../../images/headerHomePager.jpg");
+  background-image: url("../../images/ItGuide.jpg");
   min-height: 60vh;
 }
 /* End of Hero */
