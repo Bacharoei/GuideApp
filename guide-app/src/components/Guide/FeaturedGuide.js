@@ -12,7 +12,8 @@ export default function FeaturedGuide() {
   return (
     <section className="featured-guides">
       <div className="featured-guides-center">
-        <GuidesList title="Featured Guides" guides={featured} />
+        <Title title="Featuerd Guides" />
+        <GuidesList guides={featured} />
       </div>
     </section>
   );

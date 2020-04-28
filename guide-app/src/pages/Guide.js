@@ -3,27 +3,41 @@ import { useParams } from "react-router-dom";
 import { GuideContext } from "../components/context/guides";
 import { useHistory } from "react-router-dom";
 import Loading from "../components/Loading";
+import Error from "../pages/Error";
 
 const Guide = () => {
   const { id } = useParams();
   const history = useHistory();
   const { guides } = useContext(GuideContext);
-  const guide = guides.map((guide) => guide.name === guide);
+  const guide = guides.find((guide) => guide._id == id);
 
   if (guides.length === 0) {
     return <Loading />;
+  } else if (!guide) {
+    return <Error />;
   } else {
-    const { title } = guide;
+    const { title, desc, category, kbNumber } = guide;
     return (
       <>
         <section className="single-guide">
-          <img src={""} className="single-guide-images"></img>
-        </section>
+          <div className="single-guide-images"></div>
 
-        <section className="single-guide-info">
-          <article className="des">{title}</article>
-          <h2 className="desc-header">{title}</h2>
-          <h2> {title} </h2>
+          <div className="single-guide-info">
+            <article className="desc">
+              <div className="desc-header">
+                <h3> details: </h3>
+              </div>
+              <p> {desc} </p>
+            </article>
+            <article className="info">
+              <div className="info-header">
+                <h3> Info: </h3>
+              </div>
+              <h6> Category: {category} </h6>
+              <h6> KB: {kbNumber} </h6>
+              <h6> update: {kbNumber} </h6>
+            </article>
+          </div>
         </section>
       </>
     );

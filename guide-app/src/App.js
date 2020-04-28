@@ -23,17 +23,14 @@ export default function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route
-          path="/guides/:id"
-          children={<SingleGuide></SingleGuide>}
-        ></Route>
+        <Route path="/guides/:id" children={<SingleGuide />}></Route>
         <Route path="/guides">
           <GuideList />
         </Route>
         <Route path="/about">
           <About />
         </Route>
-        <Route path="*" component={ErrorPage}>
+        <Route component={ErrorPage}>
           <ErrorPage />
         </Route>
       </Switch>

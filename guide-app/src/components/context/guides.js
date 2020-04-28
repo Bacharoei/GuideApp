@@ -12,21 +12,13 @@ const GuideProvider = ({ children }) => {
 
   useEffect(() => {
     setLoading(true);
+    axios.get(`http://localhost:3030/guides`).then((res) => {
+      const conv = JSON.stringify(res);
+      setGuides(res.data);
+      setFeatured(res.data);
+      setLoading(false);
+    });
 
-    // axios.get(`${url}/guides`).then((response) => {
-    //   const featured = featuredGuides(response.data);
-    //   setFeatured(featured);
-
-    fetch("http://localhost:3030/guides")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setGuides(data);
-        setFeatured(data);
-        setLoading(false);
-        console.log(data[0]._id);
-      });
     //cleanup function
     return () => {};
   }, []);

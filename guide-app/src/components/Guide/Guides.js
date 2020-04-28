@@ -7,7 +7,7 @@ export default function Guides({ title, guides }) {
       <h2 className="section-title"> {title} </h2>
       <div className="guideslist-center">
         {guides.map((guide) => {
-          return <Guide key={guide._id} {...guide} />;
+          return <Guide key={guide} {...guide} />;
         })}
       </div>
     </section>
