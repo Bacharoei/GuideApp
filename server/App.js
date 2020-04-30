@@ -31,8 +31,10 @@ mongoose.connection.on("connected", () => {
 // import routes
 
 const guidesRoutes = require("./api/routes/guides");
+const userRoutes = require("./api/routes/users");
 
 app.use("/guides", guidesRoutes);
+app.use("/users", userRoutes);
 
 //Middleware
 app.use((res, req, next) => {

@@ -5,6 +5,8 @@ import FeaturedGuides from "../components/Guide/FeaturedGuide";
 import Services from "../components/Services/Services";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
+import NewGuide from "../pages/newGuide";
+import Login from "../pages/Login";
 
 const Home = () => {
   return (
@@ -21,6 +23,7 @@ const Home = () => {
       </Header>
       <Services />
       <FeaturedGuides />
+      <Login />
       <Footer />
     </>
   );

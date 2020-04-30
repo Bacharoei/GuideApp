@@ -41,6 +41,13 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <div className="justify-content-end">
+        <Link to="/login" className="success">
+          <button className="btn btn-outline-success my-2 my-sm-0">
+            Login
+          </button>
+        </Link>
+      </div>
     </nav>
   );
 };

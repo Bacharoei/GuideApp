@@ -1,18 +1,24 @@
 import React from "react";
-
 // react-router-dom
 import { Route, Switch } from "react-router-dom";
-
-// Pages
-import Home from "./pages/Home";
+//
+// components
+import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/About";
+import ErrorPage from "./pages/Error";
 import SingleGuide from "./pages/Guide";
 import GuideList from "./pages/Guides";
-import ErrorPage from "./pages/Error";
-import About from "./pages/About";
+// Pages
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+
+// react-router-dom
+
+// Pages
+
 //
 
 // components
-import Navbar from "./components/Navbar/Navbar";
 //
 
 export default function App() {
@@ -30,7 +36,10 @@ export default function App() {
         <Route path="/about">
           <About />
         </Route>
-        <Route component={ErrorPage}>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="*" component={ErrorPage}>
           <ErrorPage />
         </Route>
       </Switch>
