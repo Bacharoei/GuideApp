@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./guide.css";
 
-export default function Guide({ _id, title, name, category }) {
+export default function Guide({ _id, title, name, category, image }) {
   return (
     <article className="guide">
       <div className="img-container">
-        <img src={""} alt={title} />
+        <img src={image} alt={title} />
         <Link to={`guides/${_id}`} className="btn-primary guide-link">
           detauls
         </Link>

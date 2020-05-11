@@ -23,7 +23,6 @@ const Home = () => {
       </Header>
       <Services />
       <FeaturedGuides />
-      <Login />
       <Footer />
     </>
   );

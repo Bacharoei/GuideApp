@@ -36,6 +36,8 @@ const userRoutes = require("./api/routes/users");
 app.use("/guides", guidesRoutes);
 app.use("/users", userRoutes);
 
+app.use("/uploads", express.static("uploads"));
+
 //Middleware
 app.use((res, req, next) => {
   res.header("Access-Control-Allow-Origin", "*"); // ACA to all;

@@ -16,11 +16,13 @@ const Guide = () => {
   } else if (!guide) {
     return <Error />;
   } else {
-    const { title, desc, category, kbNumber } = guide;
+    const { title, desc, category, kbNumber, image } = guide;
     return (
       <>
         <section className="single-guide">
-          <div className="single-guide-images"></div>
+          <div className="single-guide-images">
+            <image src={image} alt={"imgs"} />
+          </div>
 
           <div className="single-guide-info">
             <article className="desc">

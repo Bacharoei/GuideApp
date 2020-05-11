@@ -4,6 +4,7 @@ const Guides = require("../models/guideModel");
 module.exports = {
   //create a signle Guide
   createGuide: async (req, res) => {
+    const { path: image } = req.file;
     const { name, title, desc, category, featured } = req.body;
     const guide = new Guides({
       _id: new mongoose.Types.ObjectId(),
@@ -11,6 +12,7 @@ module.exports = {
       title,
       desc,
       category,
+      image,
       featured,
     });
 
