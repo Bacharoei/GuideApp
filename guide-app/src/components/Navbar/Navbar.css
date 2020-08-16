@@ -11,7 +11,7 @@ nav {
   color: var(--primaryColor);
   transition: var(--mainTransition);
   font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .link:hover {
