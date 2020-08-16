@@ -4,7 +4,7 @@ nav {
   -moz-box-shadow: 3px 0px 20px 6px rgba(175, 154, 125, 0.66);
   box-shadow: 3px 0px 20px 6px rgba(175, 154, 125, 0.66);
   font-size: 20px;
-  background-color: var(--mainDefault);
+  /*background-color: #87ceeb; */
 }
 
 .link {
